@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gmail Demo</string>
+
+    <string-array name="name">
+        <item>FPT Software Academy</item>
+        <item>Linkedln</item>
+        <item>Google</item>
+        <item>Docker</item>
+        <item>Firefox Private Replay</item>
+        <item>FPT Software Academy</item>
+        <item>Linkedln</item>
+        <item>Google</item>
+        <item>Docker</item>
+        <item>Firefox Private Replay</item>
+    </string-array>
+
+    <string-array name="time">
+        <item>27 thg 10</item>
+        <item>25 thg 10</item>
+        <item>25 thg 10</item>
+        <item>21 thg 10</item>
+        <item>19 thg 10</item>
+        <item>19 thg 10</item>
+        <item>19 thg 10</item>
+        <item>16 thg 10</item>
+        <item>13 thg 10</item>
+        <item>10 thg 10</item>
+    </string-array>
+
+    <string-array name="topic">
+        <item>Xác Nhận Đăng Ký Thành Công WIN U GAME 3 - "BẮT SÓNG" ĐỂ "VƯỢT SÓNG"</item>
+        <item>AJ B. and others share their thoughts on LinkedIn</item>
+        <item>Cảnh báo bảo mật</item>
+        <item>[Docker] You + Docker = Ready for Action</item>
+        <item>Welcome to Firefox Relay</item>
+        <item>Xác Nhận Đăng Ký Thành Công WIN U GAME 3 - "BẮT SÓNG" ĐỂ "VƯỢT SÓNG"</item>
+        <item>AJ B. and others share their thoughts on LinkedIn</item>
+        <item>Cảnh báo bảo mật</item>
+        <item>[Docker] You + Docker = Ready for Action</item>
+        <item>Welcome to Firefox Relay</item>
+    </string-array>
+
+    <string-array name="content">
+        <item>Các bạn sinh viên trường Đại học Bách khoa Hà Nội lưu ý cần có giấy chứng nhận để dùng làm minh chứng tham gia hoạt động WIN U GAME 3.</item>
+        <item>Influencers and content creators can now use AI to create content for places that don’t exist, or worse, alter the perception of places that do exist - which will be even more harmful to the travel industry.
+</item>
+        <item>Google Drive for desktop đã được cấp quyền truy cập vào Tài khoản Google của bạn</item>
+        <item>Congratulations, your account has been verified! Sign in to your Docker account to download Docker Desktop, create repositories, and invite others to collaborate with you.</item>
+        <item>As a Firefox user, you get 5 email masks for free. Use them to hide your real email address, protect your identity, and forward only the emails you want to your inbox.
+        </item>
+        <item>Các bạn sinh viên trường Đại học Bách khoa Hà Nội lưu ý cần có giấy chứng nhận để dùng làm minh chứng tham gia hoạt động WIN U GAME 3.</item>
+        <item>Influencers and content creators can now use AI to create content for places that don’t exist, or worse, alter the perception of places that do exist - which will be even more harmful to the travel industry.
+</item>
+        <item>Google Drive for desktop đã được cấp quyền truy cập vào Tài khoản Google của bạn</item>
+        <item>Congratulations, your account has been verified! Sign in to your Docker account to download Docker Desktop, create repositories, and invite others to collaborate with you.</item>
+        <item>As a Firefox user, you get 5 email masks for free. Use them to hide your real email address, protect your identity, and forward only the emails you want to your inbox.
+        </item>
+    </string-array>
+</resources>
