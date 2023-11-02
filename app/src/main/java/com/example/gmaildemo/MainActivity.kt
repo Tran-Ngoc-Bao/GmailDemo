@@ -9,14 +9,15 @@ import android.widget.AutoCompleteTextView
 import android.widget.BaseAdapter
 import android.widget.CheckBox
 import android.widget.ImageView
-import android.widget.ListView
 import android.widget.TextView
 import androidx.activity.ComponentActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.new_activity_main)
 
         // Data user
         val name: Array<String> = resources.getStringArray(R.array.name)
@@ -41,8 +42,9 @@ class MainActivity : ComponentActivity() {
             )
         }
 
-        val listGmail = findViewById<ListView>(R.id.list_gmail)
-        listGmail.adapter = GmailAdapter(mailBox)
+        val listGmail = findViewById<RecyclerView>(R.id.recycler_view)
+        listGmail.layoutManager = LinearLayoutManager(this)
+        listGmail.adapter = NewGmailAdapter(mailBox)
     }
 }
 
@@ -99,4 +101,35 @@ class GmailAdapter(private val items: ArrayList<Gmail>) : BaseAdapter() {
         lateinit var image: ImageView
         lateinit var checkSelect: CheckBox
     }
+}
+
+class NewGmailAdapter(private val items: ArrayList<Gmail>): RecyclerView.Adapter<NewGmailAdapter.MyViewHolder>() {
+    class MyViewHolder(val row: View): RecyclerView.ViewHolder(row) {
+        val name = row.findViewById<TextView>(R.id.name)
+        val time = row.findViewById<TextView>(R.id.time)
+        val topic = row.findViewById<TextView>(R.id.topic)
+        val content = row.findViewById<TextView>(R.id.content)
+        val image = row.findViewById<ImageView>(R.id.avatar)
+        val checkSelect = row.findViewById<CheckBox>(R.id.selected)
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+        val layout = LayoutInflater.from(parent.context).inflate(R.layout.custom_gmail, parent, false)
+        return MyViewHolder(layout)
+    }
+
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        holder.name.text = items[position].name
+        holder.time.text = items[position].time
+        holder.topic.text = items[position].topic
+        holder.content.text = items[position].content
+        holder.image.setImageResource(items[position].imageResource)
+        holder.checkSelect.isChecked = items[position].selected
+        holder.checkSelect.setOnClickListener {
+            items[position].selected = !items[position].selected
+            notifyDataSetChanged()
+        }
+    }
+
+    override fun getItemCount(): Int = items.size
 }
